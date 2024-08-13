@@ -14,12 +14,12 @@ export default defineConfig({
         theme_color: '#ffc0cb',
         icons: [
           {
-            src: 'src/assets/cropped.png',
+            src: 'assets/cropped.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: 'src/assets/CompressJPEG.online_512x512_image.png',
+            src: 'assets/CompressJPEG.online_512x512_image.png',
             sizes: '512x512',
             type: 'image/png'
           }
