@@ -6,7 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 export default defineConfig({
   plugins: [react(), 
     VitePWA({
-      includeAssets: ['CompressJPEG.online_512x512_image.png', 'final-image.png'],
+      includeAssets: ['CompressJPEG.online_512x512_image.png', 'final-image.png', 'screenshot1.png', 'screenshot2.png'],
       manifest: {
         name: "poc-pwa",
         short_name:"pocPWA",
@@ -14,26 +14,26 @@ export default defineConfig({
         theme_color: '#ffc0cb',
         icons: [
           {
-            src: '/assets/final-image.png',
+            src: 'public/assets/final-image.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: "any"
           },
           {
-            src: '/assets/CompressJPEG.online_512x512_image.png',
+            src: 'public/assets/CompressJPEG.online_512x512_image.png',
             sizes: '512x512',
             type: 'image/png'
           }
         ],
         screenshots: [
           {
-            src: "/assets/screenshot1.png",
+            src: "public/assets/screenshot1.png",
             type: "image/png",
             sizes: "540x720",
             form_factor: "narrow"
           },
           {
-            src: "/assets/screenshot2.png",
+            src: "public/assets/screenshot2.png",
             type: "image/png",
             sizes: "720x540",
             form_factor: "wide"
