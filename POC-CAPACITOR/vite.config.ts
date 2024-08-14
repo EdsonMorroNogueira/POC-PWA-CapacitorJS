@@ -14,14 +14,29 @@ export default defineConfig({
         theme_color: '#ffc0cb',
         icons: [
           {
-            src: 'assets/final-image.png',
+            src: '/assets/final-image.png',
             sizes: '192x192',
-            type: 'image/png'
+            type: 'image/png',
+            purpose: "any"
           },
           {
-            src: 'assets/CompressJPEG.online_512x512_image.png',
+            src: '/assets/CompressJPEG.online_512x512_image.png',
             sizes: '512x512',
             type: 'image/png'
+          }
+        ],
+        screenshots: [
+          {
+            src: "/assets/screenshot1.png",
+            type: "image/png",
+            sizes: "540x720",
+            form_factor: "narrow"
+          },
+          {
+            src: "/assets/screenshot2.png",
+            type: "image/png",
+            sizes: "720x540",
+            form_factor: "wide"
           }
         ]
       }
