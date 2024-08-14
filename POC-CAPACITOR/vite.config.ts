@@ -6,34 +6,49 @@ import { VitePWA } from 'vite-plugin-pwa'
 export default defineConfig({
   plugins: [react(), 
     VitePWA({
-      includeAssets: ['CompressJPEG.online_512x512_image.png', 'final-image.png', 'screenshot1.png', 'screenshot2.png'],
+      registerType: 'autoUpdate',
+      includeAssets: ['screenshot1.png', 'screenshot2.png'],
       manifest: {
         name: "poc-pwa",
         short_name:"pocPWA",
         description: "Poc para transformação de um web app feito em React & Tailwind",
         theme_color: '#ffc0cb',
+        background_color: '#ffffff',
         icons: [
           {
-            src: 'public/assets/final-image.png',
-            sizes: '192x192',
-            type: 'image/png',
+            src: "assets/pwa-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
             purpose: "any"
           },
           {
-            src: 'public/assets/CompressJPEG.online_512x512_image.png',
-            sizes: '512x512',
-            type: 'image/png'
+            src: "assets/pwa-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any"
+          },
+          {
+            src: "assets/pwa-maskable-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+            purpose: "maskable"
+          },
+          {
+            src: "assets/pwa-maskable-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "maskable"
           }
         ],
         screenshots: [
           {
-            src: "public/assets/screenshot1.png",
+            src: "assets/screenshot1.png",
             type: "image/png",
             sizes: "540x720",
             form_factor: "narrow"
           },
           {
-            src: "public/assets/screenshot2.png",
+            src: "assets/screenshot2.png",
             type: "image/png",
             sizes: "720x540",
             form_factor: "wide"
